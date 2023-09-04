@@ -1,15 +1,27 @@
 package model;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 public class Hospede {
 	private Integer id;
 	private String nome;
 	private String sobrenome;
-	private LocalDate dataNascimento;
+	private Date dataNascimento;
 	private String nacionalidade;
 	private String telefone;
 	private Integer idReserva;
+
+	public Hospede(Integer id, String nome, String sobrenome, Date dataNascimento, String nacionalidade,
+			String telefone, Integer idReserva) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.dataNascimento = dataNascimento;
+		this.nacionalidade = nacionalidade;
+		this.telefone = telefone;
+		this.idReserva = idReserva;
+	}
 
 	public Integer getId() {
 		return id;
@@ -35,11 +47,11 @@ public class Hospede {
 		this.sobrenome = sobrenome;
 	}
 
-	public LocalDate getDataNascimento() {
+	public Date getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(LocalDate dataNascimento) {
+	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 

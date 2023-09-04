@@ -1,13 +1,26 @@
 package model;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 public class Reserva {
 	private Integer id;
-	private LocalDate dataEntrada;
-	private LocalDate dataSaida;
+	private Date dataEntrada;
+	private Date dataSaida;
 	private Float valor;
 	private String formaPagamento;
+
+	public Reserva() {
+
+	}
+
+	public Reserva(Integer id, Date dataEntrada, Date dataSaida, Float valor, String formaPagamento) {
+		super();
+		this.id = id;
+		this.dataEntrada = dataEntrada;
+		this.dataSaida = dataSaida;
+		this.valor = valor;
+		this.formaPagamento = formaPagamento;
+	}
 
 	public Integer getId() {
 		return id;
@@ -17,19 +30,19 @@ public class Reserva {
 		this.id = id;
 	}
 
-	public LocalDate getDataEntrada() {
+	public Date getDataEntrada() {
 		return dataEntrada;
 	}
 
-	public void setDataEntrada(LocalDate dataEntrada) {
+	public void setDataEntrada(Date dataEntrada) {
 		this.dataEntrada = dataEntrada;
 	}
 
-	public LocalDate getDataSaida() {
+	public Date getDataSaida() {
 		return dataSaida;
 	}
 
-	public void setDataSaida(LocalDate dataSaida) {
+	public void setDataSaida(Date dataSaida) {
 		this.dataSaida = dataSaida;
 	}
 
